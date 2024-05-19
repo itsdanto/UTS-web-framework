@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "1b799999-0472-4d16-904a-ecd6374b09d7",
+		"name": "uts pemweb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33450085"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/login",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"DANTO RISWANA\",\r\n    \"email\": \"dantorswn@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"password_confirmation\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/register",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"jam tangan\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/categories",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read category all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/categories",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read category by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/categories",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit category by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/categories/",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleted category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/categories/4",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"categories",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bolu brownis\",\r\n    \"description\": \"Deskripsi produak baru\",\r\n    \"price\": 20000, // Harga produk dalam satuan mata uang (misalnya Rupiah) // URL gambar produk (opsional)\r\n    \"expired_at\": \"2024-12-31\", // Tanggal kadaluarsa produk (opsional)\r\n    \"category_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/products",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bolu brownis\",\r\n    \"description\": \"This is an example product\",\r\n    \"price\": 100.0,\r\n    \"category_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/products/1",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read produk by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Produk Baru\",\r\n    \"description\": \"Deskripsi produk baru\",\r\n    \"price\": 150000, // Harga produk dalam satuan mata uang (misalnya Rupiah) // URL gambar produk (opsional)\r\n    \"expired_at\": \"2024-12-31\", // Tanggal kadaluarsa produk (opsional)\r\n    \"category_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/products/",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleted produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGFudG8ud2ViZnJhbWV3b3JrLm15LmlkL2FwaS9sb2dpbiIsImlhdCI6MTcxNjEyMDc4NywiZXhwIjoxNzE2MTI0Mzg3LCJuYmYiOjE3MTYxMjA3ODcsImp0aSI6IkVuc081cHh3SXVHQzNqM0ciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.JJuR9jGvnqMvOQlVrOAHfwbsJT8bqWcVjNrYzQkIKPg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/products/",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "google get token jwt",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "headerPrefix",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://oauth2.googleapis.com/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.google.com/o/oauth2/v2/auth",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "697111889344-2ftku8qcbcgt389b04m3ffdrt8hbgga8.apps.googleusercontent.com",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://danto.webframework.my.id/api/login/google/callback",
+					"protocol": "https",
+					"host": [
+						"danto",
+						"webframework",
+						"my",
+						"id"
+					],
+					"path": [
+						"api",
+						"login",
+						"google",
+						"callback"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
